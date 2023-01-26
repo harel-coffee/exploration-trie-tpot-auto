@@ -1,0 +1,43 @@
+pipeline,cv_score,generation,holdout_score,holdout_roc_auc_score
+"RandomForestClassifier(input_matrix, RandomForestClassifier__bootstrap=True, RandomForestClassifier__criterion=gini, RandomForestClassifier__max_features=0.8, RandomForestClassifier__min_samples_leaf=2, RandomForestClassifier__min_samples_split=20, RandomForestClassifier__n_estimators=100)",0.6239235459662289,0,0.6484836352717446,0.6888199379441496
+"MLPClassifier(Normalizer(input_matrix, Normalizer__norm=max), MLPClassifier__alpha=0.0001, MLPClassifier__learning_rate_init=0.01)",0.754826454033771,0,0.7834551095986387,0.8880992893604245
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.0001, MLPClassifier__learning_rate_init=0.01)",0.732453095684803,1,0.7789010109098189,0.8896006405765189
+"MLPClassifier(XGBClassifier(input_matrix, XGBClassifier__learning_rate=0.5, XGBClassifier__max_depth=3, XGBClassifier__min_child_weight=18, XGBClassifier__n_estimators=100, XGBClassifier__n_jobs=1, XGBClassifier__subsample=0.2, XGBClassifier__verbosity=0), MLPClassifier__alpha=0.001, MLPClassifier__learning_rate_init=0.01)",0.7587351469668543,1,0.7649384446001402,0.8754879391452306
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,2,0.7892102892603343,0.8811930737663897
+"MLPClassifier(Normalizer(input_matrix, Normalizer__norm=l2), MLPClassifier__alpha=0.0001, MLPClassifier__learning_rate_init=0.01)",0.7775218886804253,2,0.8143829446501851,0.9129216294665199
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,3,0.8246922230007006,0.9046141527374638
+"MLPClassifier(Normalizer(input_matrix, Normalizer__norm=l2), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7914931207004378,3,0.8492643379041136,0.9368431588429587
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,4,0.7834551095986387,0.8860974877389651
+"MLPClassifier(Normalizer(input_matrix, Normalizer__norm=l2), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7914931207004378,4,0.8092283054749274,0.9175257731958764
+"MLPClassifier(Normalizer(VarianceThreshold(input_matrix, VarianceThreshold__threshold=0.1), Normalizer__norm=l2), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.8200281425891183,4,0.831047943148834,0.9249324391952758
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,5,0.7998198378540686,0.8851966770093084
+"MLPClassifier(Normalizer(input_matrix, Normalizer__norm=l2), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7914931207004378,5,0.8198378540686617,0.926934240816735
+"MLPClassifier(Normalizer(VarianceThreshold(input_matrix, VarianceThreshold__threshold=0.1), Normalizer__norm=l2), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.8200281425891183,5,0.835301771594435,0.9257331598438595
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,6,0.7691922730457412,0.8780902812531278
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.05), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.9225805190744216,6,0.9557101391252127,0.9611150035031528
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,7,0.7840556500850766,0.8981082974677209
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,7,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,8,0.8031728555700131,0.8969072164948453
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,8,1.0,0.9999999999999999
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,9,0.7992192973676309,0.9109198278450605
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,9,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,10,0.8095285757181463,0.8917025322790512
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,10,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,11,0.8037733960564508,0.91562406165549
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,11,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,12,0.7840556500850766,0.8716845160644581
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,12,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,13,0.8189370433390051,0.9146231608447604
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,13,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,14,0.7995195676108497,0.8828946051446303
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,14,1.0,0.9999999999999999
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,15,0.785557001301171,0.8756881193073767
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,15,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,16,0.8031728555700131,0.9005104594134721
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,16,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,17,0.7998198378540686,0.8760884796316685
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,17,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,18,0.798919027124412,0.901010909818837
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,18,1.0,1.0
+"MLPClassifier(input_matrix, MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",0.7704307379612259,19,0.7640376338704834,0.8687819037133421
+"MLPClassifier(Binarizer(input_matrix, Binarizer__threshold=0.0), MLPClassifier__alpha=0.1, MLPClassifier__learning_rate_init=0.01)",1.0,19,1.0,1.0
