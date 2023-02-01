@@ -1,7 +1,7 @@
 
 from cmath import inf
-from mlinsights.plotting import pipeline2str
-from mlinsights.plotting import pipeline2dot
+#from mlinsights.plotting import pipeline2str
+#from mlinsights.plotting import pipeline2dot
 
 #load pickle evaluated pipelines
 
@@ -23,8 +23,6 @@ from IPython.display import Image, display
 import networkx as nx
 import random
 import math
-from sklearn.utils import shuffle
-from os import makedirs
 
 class TrieNode:
  
@@ -124,6 +122,10 @@ class PipelineTrie(object):
         import matplotlib as mpl
 
         def colorFader(c1,c2,mix=0): #fade (linear interpolate) from color c1 (at mix=0) to c2 (mix=1)
+            if mix < 0:
+                mix = 0
+            if mix > 1:
+                mix = 1
             c1=np.array(mpl.colors.to_rgb(c1))
             c2=np.array(mpl.colors.to_rgb(c2))
             return mpl.colors.to_hex((1-mix)*c1 + mix*c2)
@@ -173,7 +175,7 @@ class PipelineTrie(object):
 
 
         G = nx.nx_pydot.from_pydot(graph)
-        nt = Network(height='100%', width='100%', bgcolor='#333333', font_color='white')
+        nt = Network(bgcolor='#333333', font_color='white', height="100%",width="100%")
         nt.from_nx(G)
         nt.show(filename+'.html')
  
@@ -187,3 +189,4 @@ def extract_labels(df, labelname):
     x = x.to_numpy()
     y = y.to_numpy()
     return x, y
+
