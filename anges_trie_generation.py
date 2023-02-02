@@ -1,3 +1,13 @@
+import dill as pickle
+import sys
+import pandas as pd
+from tpot import TPOTClassifier
+from digen import Benchmark
+from os.path import exists
+from exploration_trie import PipelineTrie, extract_labels, 
+import exploration_trie as et
+
+
 directoryevs = ["/baseline/baseline","/lexicase/lexicase"]
 upper_quantile_only = False
 
@@ -12,6 +22,7 @@ name_values = {
 result = {}
 
 import pandas as pd
+#ANGES DATASET not available for public
 dataset = pd.read_csv("/Users/matsumoton/Documents/anges_cad_1_train.csv",sep=",")
 y_train = dataset['target']
 X_train = dataset.drop(['target'],axis=1)
@@ -48,6 +59,3 @@ for directoryev in directoryevs:
 
         pipeline_trie.display(f"/Users/matsumoton/Library/CloudStorage/Box-Box/tpot_benchmark_data/anges{directoryev}_run{i}_ds_{pipeline_trie.root.diversity_score}")
         print("global efficiency run " + str(i) + " : " + str(na.global_efficiency(pipeline_trie.graph)))
-        A = nx.adjacency_matrix(pipeline_trie.graph)
-
-        A.todense()
