@@ -9,7 +9,6 @@ import random
 import numpy as np
 
 import sys
-sys.path.append('/common/matsumoton/git/digen')
 from digen import Benchmark
 
 if __name__ == "__main__":
@@ -29,16 +28,16 @@ if __name__ == "__main__":
 
     #args.dataset = "./datasets/Concrete.csv"
     args.labelname = "target"
-    gen_fitnesses_dir = "/common/matsumoton/results/gen_fitnesses" 
-    offspring_dir = "/common/matsumoton/results/offspring_generation_test"
-    resource_logging_dir = "/common/matsumoton/results/resource_logging"
-    pipeline_dir = "/common/matsumoton/results/pipelines"
+    gen_fitnesses_dir = "./results/gen_fitnesses" 
+    offspring_dir = "./results/offspring_generation_test"
+    resource_logging_dir = "./results/resource_logging"
+    pipeline_dir = "./results/pipelines"
     create_dirs(gen_fitnesses_dir)
     create_dirs(offspring_dir)
     create_dirs(resource_logging_dir)
     create_dirs(pipeline_dir)
 
-    pareto_fitnesses_dir = "/common/matsumoton/results/pareto_fitnesses" 
+    pareto_fitnesses_dir = "./results/pareto_fitnesses" 
     create_dirs(pareto_fitnesses_dir)
 
     print('digen'+str(args.dataset_num))
@@ -57,19 +56,6 @@ if __name__ == "__main__":
         X, Y = extract_labels(args.dataset, args.labelname)
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, train_size=0.8,random_state=5)
 
-        #pipeline_optimizer = get_optimizer(args.classification, gens=args.gen, pop_size=args.pop_random_sampling,
-        #                                   offspr_size=args.pop_random_sampling, scoring=args.scoring,
-        #                                   track_fitnesses=True,track_generations=True,resource_logging=True)
-        #pipeline_optimizer.fit(X_train, Y_train)
-
-        #print("Tpot fit executed. Dumping evolution data into csv")
-        #no_ev_dump_file = f"{gen_fitnesses_dir}/{dump_file_name}_no_evolution_pop{args.pop_random_sampling}_gen0.csv"
-        #pipeline_optimizer.dump_fitness_tracker(no_ev_dump_file)
-
-        #with open(f"{pipeline_dir}/{dump_file_name}_gen0.pkl", 'wb') as outp:
-        #    pickle.dump(pipeline_optimizer, outp, -1)
-
-        # one generation is evaluated outside the number of generations (DEAP based)
         pipeline_optimizer = get_optimizer(args.classification, gens=args.gen - 1, pop_size=args.pop,
                                            offspr_size=args.pop, scoring=args.scoring, track_fitnesses=True,
                                            track_generations=True, resource_logging=True, test_x = X_test, test_y = Y_test,cv=10)

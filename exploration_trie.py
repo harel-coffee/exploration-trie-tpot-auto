@@ -1,21 +1,13 @@
 
 from cmath import inf
-#from mlinsights.plotting import pipeline2str
-#from mlinsights.plotting import pipeline2dot
 
-#load pickle evaluated pipelines
 
-from os.path import exists
 import matplotlib.pyplot as plt
 import numpy as np
-import dill as pickle
-import sys
-import pandas as pd
-from tpot import TPOTClassifier
+
 import deap
 from deap import creator
-sys.path.append('/Users/matsumoton/Git/digen')
-from digen import Benchmark
+
 
 import pydot 
 from IPython.display import Image, display

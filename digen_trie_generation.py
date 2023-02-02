@@ -1,5 +1,11 @@
-
-import exploration-trie-tpot.exploration-trie as et
+import dill as pickle
+import sys
+import pandas as pd
+from tpot import TPOTClassifier
+from digen import Benchmark
+from os.path import exists
+from exploration_trie import PipelineTrie, extract_labels, 
+import exploration_trie as et
 
 benchmark=Benchmark()
 directoryevs = ["lex_final"]
