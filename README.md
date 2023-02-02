@@ -40,5 +40,5 @@ Included benchmarking info:
 - resource logging (csv format): local memory usage and time usage per generation
 - evaluated_individuals (pickle file): contains all the pipelines evaluated by TPOT. This file is key to build the exploration trie.
 
-##  Step 2 - 
+##  Step 2 - Build the exploration trie
 Follow and run the digen_trie_generation.py in the main folder.
