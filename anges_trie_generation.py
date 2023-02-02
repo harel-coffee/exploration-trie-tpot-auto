@@ -4,7 +4,7 @@ import pandas as pd
 from tpot import TPOTClassifier
 from digen import Benchmark
 from os.path import exists
-from exploration_trie import PipelineTrie, extract_labels, 
+from exploration_trie import PipelineTrie, extract_labels
 import exploration_trie as et
 
 

@@ -4,7 +4,7 @@ import pandas as pd
 from tpot import TPOTClassifier
 from digen import Benchmark
 from os.path import exists
-from exploration_trie import PipelineTrie, extract_labels, 
+from exploration_trie import PipelineTrie, extract_labels
 import exploration_trie as et
 
 benchmark=Benchmark()
@@ -30,16 +30,16 @@ for j in [2,4,7,14,23,24,25,27,28,30,32,35,40]:
         for i in range(40):
             pipeline_trie = PipelineTrie()
             # if not exists(f"/Users/matsumoton/Library/CloudStorage/Box-Box/tpot_benchmark_data/results_pop40_gen20_{directoryev}/pipelines/digen{j}_run_{i}_evaluated_individuals.pkl") :
-            if not exists(f"./results_pop40_gen20_{directoryev}/pipelines/digen{j}_run_{i}_evaluated_individuals.pkl") :
+            if not exists(f"./results/digen/results_pop40_gen20_{directoryev}/pipelines/digen{j}_run_{i}_evaluated_individuals.pkl") :
             
                 continue
-            with open(f"./digen/results_pop40_gen20_{directoryev}/pipelines/digen{j}_run_{i}_evaluated_individuals.pkl", 'rb') as file:
+            with open(f"./results/digen/results_pop40_gen20_{directoryev}/pipelines/digen{j}_run_{i}_evaluated_individuals.pkl", 'rb') as file:
                 unpickler = pickle.Unpickler(file)
                 result = unpickler.load()
                 for k , v in result.items():
                     #print(k)
                     pipeline_trie.insert(k,v,tpot._pset)
-            pipeline_trie.display(f"./digen/results_pop40_gen20_{directoryev}/trie_network/digen{j}_run{i}_ds_{pipeline_trie.root.diversity_score}")
+            pipeline_trie.display(f"./results/digen/results_pop40_gen20_{directoryev}/trie_network/digen{j}_run{i}_ds_{pipeline_trie.root.diversity_score}")
             #if i in [5]:
                 #pipeline_trie.display(f"{directoryev}_digen{j}_run{i}_ds_{pipeline_trie.root.diversity_score}")
                 
