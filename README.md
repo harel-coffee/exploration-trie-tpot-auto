@@ -1,6 +1,6 @@
 # exploration-trie-tpot
 Comparison of evolutionary algorithms within TPOT using a trie to determine their exploratory nature
-![alt text](https://github.com/Epistasis/exploration-trie-tpot/blob/main/sample_trie.jpg?raw=true)
+![alt text](https://github.com/EpistasisLab/exploration-trie-tpot/blob/main/sample_trie.jpg?raw=true)
 ### Supplemental Data
 
 After running TPOT with the included code (differs from the original TPOT as it has much more benchmarking code), we can read in the pickled TPOT run with all the evaluated pipelines within the run as a union of explored trees as a trie.
