@@ -2,7 +2,7 @@
 Comparison of evolutionary algorithms within TPOT using a trie to determine their exploratory nature
 ![alt text](https://github.com/EpistasisLab/exploration-trie-tpot/blob/main/sample_trie.jpg?raw=true)
 
-This project contains all the python code and pickled network data to reproduce the results in the paper:
+This project contains all the python code to generate the trie and the different TPOT versions to reproduce the results in the paper:
 
 Faster Convergence with Lexicase Selection in Tree-based Automated Machine Learning
 Nicholas Matsumoto, Anil Kumar Saini, Pedro Ribeiro, Hyunjun Choi, Alena Orlenko, Leo-Pekka Lyytikäinen, Jari O Laurikka, Terho Lehtimäki, Sandra Batista, Jason H. Moore[https://arxiv.org/abs/2302.00731]
